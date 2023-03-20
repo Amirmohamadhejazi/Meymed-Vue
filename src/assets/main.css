@@ -18,51 +18,18 @@
 .selector-for-some-widget {
   box-sizing: content-box;
 }
-/*#app {*/
-/*  max-width: 1280px;*/
-/*  margin: 0 auto;*/
-/*  padding: 2rem;*/
-
-/*  font-weight: normal;*/
-/*}*/
-
-/*a,*/
-/*.green {*/
-/*  text-decoration: none;*/
-/*  color: hsla(160, 100%, 37%, 1);*/
-/*  transition: 0.4s;*/
-/*}*/
-
-/*@media (hover: hover) {*/
-/*  a:hover {*/
-/*    background-color: hsla(160, 100%, 37%, 0.2);*/
-/*  }*/
-/*}*/
-
-/*@media (min-width: 1024px) {*/
-/*  body {*/
-/*    display: flex;*/
-/*    place-items: center;*/
-/*  }*/
-
-/*  #app {*/
-/*    display: grid;*/
-/*    grid-template-columns: 1fr 1fr;*/
-/*    padding: 0 2rem;*/
-/*  }*/
-/*}*/
 
 /* ******************************************** Global Style */
 
-.familly_iranyekan{
-  font-family: iranyekanwebblack;
-}
-.familly_iranyekan_bold{
-  font-family: iranyekanBold;
-}
-.familly_iranyekan_light{
-  font-family: iranyekanlight;
-}
+/*.familly_iranyekan{*/
+/*  font-family: iranyekanwebblack;*/
+/*}*/
+/*.familly_iranyekan_bold{*/
+/*  font-family: iranyekanBold;*/
+/*}*/
+/*.familly_iranyekan_light{*/
+/*  font-family: iranyekanlight;*/
+/*}*/
 html, body{
   margin: 0;
   direction: rtl;
@@ -70,8 +37,12 @@ html, body{
 }
 body{
   padding-top: 30px;
-  background-color: #949494;
+  height: 100000rem;
+  background-color: #F4FAFF;
   font-family: iranyekanwebblack;
+  background-image: url("/src/assets/img/body img/1.svg") ,url("/src/assets/img/body img/2.svg") ,url("/src/assets/img/body img/3.svg") ,url("/src/assets/img/body img/4.svg") ,url("/src/assets/img/body img/5.svg")  ;
+  background-repeat: no-repeat;
+  background-position: center 354px, left 1593px ,right 1678px, left 3048px, left 4364px;
 }
 
 .flex-center{
@@ -130,6 +101,12 @@ p{
 
 
 
+.gap10{
+  gap: 10px;
+}
+.gap15{
+  gap: 15px;
+}
 
 
 
@@ -143,6 +120,27 @@ input::-webkit-inner-spin-button {
 }
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+
+.form-control::placeholder {
+  color: #a6b8ba !important;
+}
+
+.form-control{
+  background: #FFFFFF;
+  box-shadow: 5px 8px 30px -15px rgba(0, 0, 0, 0.1);
+  direction: rtl;
+  color:black;
+  border: 0;
+  border-radius: 4px!important;
+  height: 45px
+
+}
+.form-control:focus{
+  color:black;
+  box-shadow:unset;
+  background: #FFFFFF;
 }
 
 /* ******************************************** Footer */
