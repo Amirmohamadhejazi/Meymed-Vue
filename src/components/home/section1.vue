@@ -12,9 +12,7 @@
         <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
         <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
       </div>
-
         <form class="d-flex flex-row justify-content-between flex-wrap" @submit.prevent="handleSubmit">
-
           <div class="input-group flex-nowrap boxes_under_options">
             <input type="text" class="form-control inputCustom" placeholder="نام و نام خانوادگی" aria-label="name" aria-describedby="addon-wrapping" name="name" v-model="form.name">
           </div>
@@ -32,7 +30,6 @@
           </div>
           <div class="boxes_under_options bg_yellow">
             <button type="submit"  >ثبت درخواست</button>
-
           </div>
         </form>
 
@@ -204,11 +201,6 @@ export default {
     changeTab(data) {
       this.number_option = data
     },
-    // formSubmit(values, {resetForm}) {
-    //   console.log(values)
-    //   // console.log(resetForm)
-    // },
-
     handleSubmit() {
       this.$emit('submit', this.form)
       console.log(this.form)

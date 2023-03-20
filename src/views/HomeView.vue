@@ -3,11 +3,13 @@
   <div class="d-flex justify-content-center flex-column bg_White trn3 container  ">
       <Header/>
       <Sec1/>
+      <Sec2/>
   </div>
 </template>
 <script  >
 import Header from "@/components/home/header.vue";
 import Sec1 from "@/components/home/section1.vue";
+import Sec2 from "@/components/home/section2.vue";
 
 
 export default {
@@ -19,7 +21,8 @@ export default {
   },
   components:{
     Header,
-    Sec1
+    Sec1,
+    Sec2
   },
 
 
