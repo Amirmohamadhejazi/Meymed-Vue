@@ -67,8 +67,8 @@
     </nav>
 
   <div class="w-100 flex-center" >
-    <div class="box_category ">
-      <div class="items_category" v-for="items in dataCategory" :key="items.key">
+    <div class="box_category flex-wrap">
+      <div class="items_category mt-2" v-for="items in dataCategory" :key="items.key">
           <div class="img_category">
             <img :src="items.img" style="width: 100% ; height: 100% ; object-fit: cover" alt="">
           </div>
@@ -152,7 +152,7 @@
 
 .box_category{
   width: 80%;
-  height: 10rem;
+  /*height: 10rem;*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;

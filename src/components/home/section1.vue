@@ -7,7 +7,7 @@
           <span class="mt-3">{{items.text}}</span>
         </div>
       </div>
-      <div class="d-flex flex-column my-3">
+      <div class="d-flex flex-column my-3" style="font-size: 10px">
         <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
         <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
         <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
@@ -55,7 +55,7 @@
 }
 .item_box{
   color: #000000;
-  margin-top: 100px;
+  margin-top: 50px;
   position: relative;
   padding: 30px;
   background: #FFFFFF;

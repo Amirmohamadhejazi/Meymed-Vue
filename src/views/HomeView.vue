@@ -4,12 +4,16 @@
       <Header/>
       <Sec1/>
       <Sec2/>
+      <Sec3/>
+      <Sec4/>
   </div>
 </template>
 <script  >
 import Header from "@/components/home/header.vue";
 import Sec1 from "@/components/home/section1.vue";
 import Sec2 from "@/components/home/section2.vue";
+import Sec3 from "@/components/home/section3.vue";
+import Sec4 from "@/components/home/section4.vue";
 
 
 export default {
@@ -22,7 +26,9 @@ export default {
   components:{
     Header,
     Sec1,
-    Sec2
+    Sec2,
+    Sec3,
+    Sec4,
   },
 
 

@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap'
 import 'swiper';
+import 'isotope-layout';
 
 
 import App from './App.vue'
