@@ -1,20 +1,25 @@
-
 <template>
   <div class="d-flex justify-content-center flex-column bg_White trn3 container  ">
-      <Header/>
-      <Sec1/>
-      <Sec2/>
-      <Sec3/>
-      <Sec4/>
+    <Header/>
+    <Sec1/>
+    <Sec2/>
+    <Sec3/>
+    <Sec4_6 typeCmp="sec4"/>
+    <Sec5/>
+    <Sec4_6 typeCmp="sec6"/>
+    <Sec7/>
+    <Footer/>
   </div>
 </template>
-<script  >
+<script>
 import Header from "@/components/home/header.vue";
 import Sec1 from "@/components/home/section1.vue";
 import Sec2 from "@/components/home/section2.vue";
 import Sec3 from "@/components/home/section3.vue";
-import Sec4 from "@/components/home/section4.vue";
-
+import Sec4_6 from "@/components/home/section4_6.vue";
+import Sec5 from "@/components/home/section5.vue";
+import Sec7 from "@/components/home/section7.vue";
+import Footer from "@/components/footer/Footer.vue";
 
 export default {
   data() {
@@ -28,29 +33,11 @@ export default {
     Sec1,
     Sec2,
     Sec3,
-    Sec4,
-  },
-
-
-  methods: {
-    getTime(){
-      let countDownDate = new Date("march 19, 2023 15:37:25").getTime();
-      setInterval(()=> {
-        let now = new Date().getTime();
-        let distance = countDownDate - now;
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        this.timeCount = {d:days ,h:hours ,m:minutes ,s:seconds }
-      }, 1000);
-    },
-  },
-  mounted() {
-    // this.getTime();
+    Sec5,
+    Sec4_6,
+    Sec7,
+    Footer,
   },
 }
-
-
 
 </script>

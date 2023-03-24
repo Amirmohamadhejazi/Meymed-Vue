@@ -1,5 +1,5 @@
 <template>
-  <div class="box_menu  ">
+  <div class="box_menu_sec2">
     <div class="menu_inner_t col-12 col-lg-11 flex-wrap">
       <span class="mt-2">دستگاه‌های پزشکی</span>
       <span class="mt-2">تجهیزات اتاق عمل</span>
@@ -9,8 +9,6 @@
     </div>
     <div class="menu_inner_b col-11 col-lg-10"/>
   </div>
-
-
   <div class="w-100 d-flex justify-content-between flex-wrap">
     <cardItemsShop v-for="items in itemsCard" :dataCard="items"/>
   </div>
@@ -18,7 +16,7 @@
 
 <style>
 /************************************ Box ****************************************/
-.box_menu{
+.box_menu_sec2{
   position: relative;
   margin-top: 80px;
   background: transparent;
@@ -68,7 +66,6 @@
 </style>
 
 <script>
-
 import cardItemsShop from "../helperComponents/cardItemsShop.vue";
 import img1 from "../../assets/img/icon/sec2/sec2iconitems1.svg"
 import img2 from "../../assets/img/icon/sec2/sec2iconitems2.svg"
