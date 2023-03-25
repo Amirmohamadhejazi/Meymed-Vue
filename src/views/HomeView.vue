@@ -8,6 +8,7 @@
     <Sec5/>
     <Sec4_6 typeCmp="sec6"/>
     <Sec7/>
+    <Sec8/>
     <Footer/>
   </div>
 </template>
@@ -19,6 +20,7 @@ import Sec3 from "@/components/home/section3.vue";
 import Sec4_6 from "@/components/home/section4_6.vue";
 import Sec5 from "@/components/home/section5.vue";
 import Sec7 from "@/components/home/section7.vue";
+import Sec8 from "@/components/home/section8.vue";
 import Footer from "@/components/footer/Footer.vue";
 
 export default {
@@ -35,6 +37,7 @@ export default {
     Sec3,
     Sec5,
     Sec4_6,
+    Sec8,
     Sec7,
     Footer,
   },

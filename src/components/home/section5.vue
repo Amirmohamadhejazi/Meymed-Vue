@@ -37,7 +37,7 @@
           <span>بیش از 30 درصد تخفیف</span>
           <span> برای محصولات برند رزمکس</span>
         </div>
-        <div><img src="../../assets/img/icon/sec7Logo.svg" alt=""></div>
+        <div><img src="../../assets/img/icon/sec5Logo.svg" alt=""></div>
       </div>
       <div class="w-100 d-flex flex-column text-desc-sec5 my-lg-3 align-items-center align-items-lg-start  my-3 my-lg-0">
         <span>محصولات نمونه برند رزمکس</span>
@@ -95,12 +95,12 @@ export default {
   justify-content: center;
 }
 .box_items1{
-  background: url('/src/assets/img/icon/sec7icon2.svg'), #9FC1E5;
+  background: url('/src/assets/img/icon/sec5icon2.svg'), #9FC1E5;
   background-repeat: no-repeat;
   background-position:right;
 }
 .box_items2{
-  background: url('/src/assets/img/icon/sec7icon1.svg'), #FFFFFF;
+  background: url('/src/assets/img/icon/sec5icon1.svg'), #FFFFFF;
   background-repeat: no-repeat;
   background-position:left bottom;
 }

@@ -54,7 +54,9 @@ body{
 .trn3{
   transition: 0.3s;
 }
-
+.w-90{
+  width: 90%;
+}
 p{
   margin: 0;
 }
