@@ -1,9 +1,9 @@
 <template>
-  <div class="content_box flex-column flex-lg-row">
+  <div class="content_box_sec1 flex-column flex-lg-row">
     <div class="item_box col-12 col-lg-7 ">
       <div class="d-flex flex-row justify-content-between flex-wrap">
         <div :class="[items.id  === number_option ? 'options_box_select options_box_selected' : 'options_box_select' ]" v-for="items in items_options" :key="items.id" @click="changeTab(items.id)">
-          <img :src="items.img" alt="">
+          <img :src="items.id  === number_option ? items.imgAcive :items.img" alt="">
           <span class="mt-3">{{items.text}}</span>
         </div>
       </div>
@@ -48,9 +48,10 @@
 
 <style>
 /************************************ Box ****************************************/
-.content_box{
+.content_box_sec1{
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
 }
 .item_box{
   color: #000000;
@@ -152,26 +153,31 @@ export default {
         {
           text:"سازمانی",
           img:"../src/assets/img/icon/sec1_icon5.svg",
+          imgAcive:"../src/assets/img/icon/sec1_icon5_Active.svg",
           id:0
         },
         {
           text:"استعلام قیمت",
           img:"../src/assets/img/icon/sec1_icon4.svg",
+          imgAcive:"../src/assets/img/icon/sec1_icon4_Active.svg",
           id:1
         },
         {
           text:"درخواست دمو",
           img:"../src/assets/img/icon/sec1_icon3.svg",
+          imgAcive:"../src/assets/img/icon/sec1_icon3_Active.svg",
           id:2
         },
         {
           text:"درخواست خدمات",
           img:"../src/assets/img/icon/sec1_icon2.svg",
+          imgAcive:"../src/assets/img/icon/sec1_icon2_Active.svg",
           id:3
         },
         {
           text:"درخواست تعمیرات",
           img:"../src/assets/img/icon/sec1_icon1.svg",
+          imgAcive:"../src/assets/img/icon/sec1_icon1_Active.svg",
           id:4
         }
       ]

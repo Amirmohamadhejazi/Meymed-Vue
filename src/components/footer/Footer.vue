@@ -83,7 +83,7 @@
       </div>
       <div class="col-12 col-lg-5 d-flex flex-column align-items-center  mt-3  mt-lg-0 ">
         <div class="text_end_footer_left_blue">با عضویت در خبرنامه فروشگاه می‌مد از محصولات جدید و به‌روزرسانی‌ها با خبر شوید</div>
-        <div class=" col-9 col-lg-12 flex-nowrap position-relative mt-2  mt-lg-5">
+        <div class=" col-10 col-lg-9 flex-nowrap position-relative mt-2  mt-lg-5">
         <div class="position-absolute box_on_Input" style="z-index: 6"> 
           عضویت
         </div>

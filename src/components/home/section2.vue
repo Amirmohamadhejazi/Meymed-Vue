@@ -1,19 +1,17 @@
 <template>
   <div class="box_menu_sec2">
     <div class="menu_inner_t col-12 col-lg-11 flex-wrap">
-      <swiper typeCmp="sec_2_nav" :data_swipe2="itemsNav" :SwiperhandleClick="handleClickSwiper"/>
+      <swiper typeCmp="sec_2_nav" :data_swipe2="itemsNav" :SwiperhandleClick="handleClickSwiper" :currentCategory="currentCategory"/>
     </div>
     <div class="menu_inner_b col-11 col-lg-10"/>
   </div>
   <div class="w-100 flex-center">
-    <div class="w-100 d-flex justify-content-center align-items-center flex-wrap  sec2-content-des " v-if="width_desc" >
+    <div :class="`w-100 d-flex ${filteredItems.length <= 2 ? 'justify-content-start' : 'justify-content-center'} align-items-center flex-wrap  sec2-content-des ` " v-if="width_desc" >
       <cardItemsShop v-for="items in filteredItems" :dataCard="items"/> 
     </div> 
     <swiper typeCmp="sec_2_content" :data_swipe3="filteredItems" v-else/>
   </div>
-  
 </template>
-
 
 <style>
 /************************************ Box ****************************************/
@@ -34,11 +32,13 @@
   box-shadow: 5px 10px 30px -15px rgba(0, 0, 0, 0.1);
 }
 .menu_inner_t{
-  padding: 30px;
+  /* padding: 30px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: black;
+  font-weight: 700;
+font-size: 14px;
+color: #616161;
   height: 103px;
   background: #FFFFFF;
   z-index: 1;
@@ -47,7 +47,16 @@
   height: 113px;
   background: #B4D9FF;
 }
-
+.items_sec_2_nav{
+  border-radius: 10px;
+  padding: 15px;
+}
+.items_sec_2_nav_Active{
+  font-weight: 700;
+font-size: 14px;
+color:black;
+    background-color: #F4FAFF;
+}
 
 /************************************ Box ****************************************/
 @media only screen and (max-width: 1199px) {

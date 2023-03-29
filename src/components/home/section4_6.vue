@@ -124,35 +124,35 @@ export default {
       default: () => ({
         breakpoints: {
           360: {
-            slidesPerView: 1.05,
+            slidesPerView: 1,
             spaceBetween: 0,
           },
           400: {
-            slidesPerView: 1.165,
+            slidesPerView: 1.11,
             spaceBetween: 0,
           },
           450: {
-            slidesPerView: 1.32,
+            slidesPerView: 1.26,
             spaceBetween: 0,
           },
           576: {
-            slidesPerView: 1.6,
+            slidesPerView: 1.53,
             spaceBetween: 0,
           },
           768: {
-            slidesPerView: 2.15,
+            slidesPerView: 2.07,
             spaceBetween: 0,
           },
           992: {
-            slidesPerView: 2.9,
+            slidesPerView: 2.77,
             spaceBetween: 0,
           },
           1200: {
-            slidesPerView: 3.45,
+            slidesPerView: 3.32,
             spaceBetween: 0,
           },
           1400: {
-            slidesPerView: 4.15,
+            slidesPerView: 3.78,
             spaceBetween: 0,
           },
         },
@@ -163,15 +163,15 @@ export default {
       default: () => ({
         breakpoints: {
           360: {
-            slidesPerView: 1.7,
+            slidesPerView: 1.67,
             spaceBetween: 0,
           },
           400: {
-            slidesPerView: 1.8,
+            slidesPerView: 1.87,
             spaceBetween: 0,
           },
           450: {
-            slidesPerView: 2.1,
+            slidesPerView: 2.14,
             spaceBetween: 0,
           },
           576: {
@@ -191,7 +191,7 @@ export default {
             spaceBetween: 0,
           },
           1400: {
-            slidesPerView: 6.6,
+            slidesPerView: 6.5,
             spaceBetween: 0,
           },
         },

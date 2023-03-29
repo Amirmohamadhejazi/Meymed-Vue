@@ -1,5 +1,5 @@
 <template>
-  <div class="content_box d-flex flex-lg-row justify-content-lg-between align-items-center  flex-column ">
+  <div class="content_box_sec3 d-flex flex-lg-row justify-content-lg-between align-items-center  flex-column ">
     <div class="box1 d-flex flex-lg-row align-items-center flex-column-reverse ">
       <div class="col-lg-6 col-12 d-flex align-items-lg-start align-items-center flex-column pe-3  ">
         <span>انواع محصولات ضدعفونی کننده</span>
@@ -27,7 +27,7 @@
 
 <style>
 /************************************ Box ****************************************/
-.content_box{
+.content_box_sec3{
   margin-top: 100px;
   width: 100%;
   color: black;

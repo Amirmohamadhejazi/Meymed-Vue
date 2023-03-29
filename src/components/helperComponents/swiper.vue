@@ -16,15 +16,18 @@
         </div>
       </div>
     </div>
-    <div class="w-100 overflow-hidden" v-if="typeCmp==='sec_2_nav'">
+    <div class="w-100 overflow-hidden" v-if="typeCmp==='sec_2_nav'">  
           <div class="swiper-container-sec2-nav">
               <div class="swiper-wrapper d-flex justify-content-between">
-                <div class="swiper-slide cursor_pointer" v-for="items in data_swipe2" :key="items.key"  @click="handleClick(items.category)">
-                  <span class="mt-2">{{ items.text }}</span>
+                 <div :class="`swiper-slide cursor_pointer items_sec_2_nav ${items.category == currentCategory && 'items_sec_2_nav_Active'}`"
+                v-for="items in data_swipe2" :key="items.key"  @click="handleClick(items.category)">
+                  <span class="mt-2 ">{{ items.text }}</span>
                 </div>
               </div>
           </div>
     </div> 
+
+
       <div class="swiper-container-sec2-content w-100 overflow-hidden " v-if="typeCmp==='sec_2_content'">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="(items , index) in data_swipe3"  >
@@ -36,7 +39,7 @@
   </template>
   <style>
   /************************************ Box ****************************************/
-  .swiper-container-header , .swiper-container-sec2-nav{
+  .swiper-container-header, .swiper-container-sec2-nav{
     overflow: hidden;
     position: relative;
   }
@@ -110,12 +113,13 @@
       data_swipe1:[],
       data_swipe2:[],
       data_swipe3:[],
+      currentCategory:"",
       options1: {
         type: Object,
         default: () => ({
           breakpoints: {
-            350: {
-              slidesPerView: 1.4,
+            360: {
+              slidesPerView: 1.52,
               spaceBetween: 0,
             },
             400: {
@@ -273,7 +277,6 @@
       },
       handleClick(data) {
       this.SwiperhandleClick(data);
-      // console.log(data)
       }
       
     }

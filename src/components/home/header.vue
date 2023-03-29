@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div class="inputNav flex-center bg_Saffron display_btn_nav">
+      <div class="inputNav flex-center bg_Saffron display_btn_nav_desc">
         <div class="w-100 d-flex justify-content-around align-items-center">
           <div class="d-flex flex-column text-left">
             <span>۰۲۱</span>
@@ -31,7 +31,7 @@
           <div class=" iconbtn" style="z-index: 4"><img src="src/assets/callIcon.svg"  width="100%" height="100%"  alt="icon"></div>
         </div>
       </div>
-      <div class="inputNav flex-center bg_TuftsBlue display_btn_nav">
+      <div class="inputNav flex-center bg_TuftsBlue display_btn_nav_desc">
         <div class="w-100 d-flex justify-content-around align-items-center text-center text-white">
           ورود | ثبت نام
         </div>
@@ -55,6 +55,23 @@
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
+
+            <div class="d-flex  align-items-center justify-content-around">
+              <div class="inputNav flex-center bg_TuftsBlue display_btn_nav_mobile">
+                <div class="w-100 d-flex justify-content-around align-items-center text-center text-white">
+                  ورود | ثبت نام
+                </div>
+              </div> 
+              <div class="inputNav flex-center bg_Saffron display_btn_nav_mobile mt-2">
+                <div class="w-100 d-flex justify-content-around align-items-center">
+                  <div class="d-flex flex-column text-left">
+                    <span>۰۲۱</span>
+                    <span class="familly_iranyekan_bold">۹۱۱۰۱۴۹۱۹</span>
+                  </div>
+                  <div class=" iconbtn" style="z-index: 4"><img src="src/assets/callIcon.svg"  width="100%" height="100%"  alt="icon"></div>
+                </div>
+              </div>
+            </div>           
             <ul className="w-100 d-lg-flex justify-content-between navbar-nav p-0">
               <li className="nav-item" v-for="items in dataMenu">
                 <a className="nav-link box_menu_items" aria-current="page" href="#">{{items.text}}</a>
@@ -88,6 +105,9 @@
 
 /* ******************************************** Navbar */
 
+.display_btn_nav_mobile{
+    display: none!important;
+  }
 
 /************************************ Box ****************************************/
 
@@ -199,8 +219,11 @@
   .input_search {
     max-width: 35%;
   }
-  .display_btn_nav{
+  .display_btn_nav_desc{
     display: none!important;
+  }
+  .display_btn_nav_mobile{
+    display: flex!important;
   }
   .navbar {
     width: 100%;
@@ -222,7 +245,7 @@
     overflow: hidden;
   }
   .offcanvas{
-    height: 50%!important;
+    height: 75%!important;
   }
 }
 @media only screen and (max-width: 767px) {
