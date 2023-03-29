@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="box_menu_sec2">
     <div class="menu_inner_t col-12 col-lg-11 flex-wrap">
       <swiper typeCmp="sec_2_nav" :data_swipe2="itemsNav" :SwiperhandleClick="handleClickSwiper"/>
@@ -6,10 +6,10 @@
     <div class="menu_inner_b col-11 col-lg-10"/>
   </div>
   <div class="w-100 flex-center">
-    <div class="w-100 d-flex justify-content-center align-items-center flex-wrap  sec2-content-des " v-if="width_desc" >
-      <cardItemsShop v-for="items in filteredItems" :dataCard="items"/> 
-    </div> 
-    <swiper typeCmp="sec_2_content" :data_swipe3="filteredItems" v-else/>
+<div class="w-100 d-flex justify-content-center  justify-content-lg-between align-items-center flex-wrap   "   >
+  
+    <cardItemsShop v-for="items in filteredItems" :dataCard="items"/>
+  </div>
   </div>
   
 </template>
@@ -48,6 +48,8 @@
   background: #B4D9FF;
 }
 
+/************************************ search form ****************************************/
+
 
 /************************************ Box ****************************************/
 @media only screen and (max-width: 1199px) {
@@ -74,13 +76,7 @@ import img5 from "../../assets/img/icon/sec2/sec2iconitems5.svg"
 import img6 from "../../assets/img/icon/sec2/sec2iconitems6.svg"
 import img7 from "../../assets/img/icon/sec2/sec2iconitems7.svg"
 import img8 from "../../assets/img/icon/sec2/sec2iconitems8.svg"
-import img9 from "../../assets/img/icon/formdoctor.png"
-import img10 from "../../assets/img/icon/SurgicalBlade.png"
-import img11 from "../../assets/img/icon/hospitalbed.jpg"
-import img12 from "../../assets/img/icon/hospitalbed2.jpg"
-import img13 from "../../assets/img/icon/hospitalbed3.jpg"
-import img14 from "../../assets/img/icon/hospitalbed4.jpg"
-import img15 from "../../assets/img/icon/Medicalinstruments.png"
+import img9 from "../../assets/img/icon/formdoctor.jpg"
 import swiper from "@/components/helperComponents/swiper.vue";
 
 export default {
@@ -88,7 +84,6 @@ export default {
     return {
       number_option: 0,
       swiper1: null,
-      width_desc :undefined ,
       itemsNav:[
         {text:"دستگاه های پزشکی ",
           category:"category1",
@@ -113,7 +108,7 @@ export default {
           description:"تب سنج دیجیتال رز دیتا",
           price:45000,
           percentage:0,
-          category: 'category5'
+          category: 'category1'
         },
         {
           img:img3,
@@ -121,7 +116,7 @@ export default {
           description:"تب سنج دیجیتال رز دیتا",
           price:68479,
           percentage:0,
-          category: 'category5'
+          category: 'category2'
         },
         {
           img:img2,
@@ -129,7 +124,7 @@ export default {
           description:"تب سنج دیجیتال رز دیتا",
           price:547920,
           percentage:10,
-          category: 'category5'
+          category: 'category2'
         },
         {
           img:img1,
@@ -137,7 +132,7 @@ export default {
           description:"تب سنج دیجیتال رز دیتا",
           price:390000,
           percentage:6,
-          category: 'category5'
+          category: 'category1'
         },
         {
           img:img8,
@@ -145,7 +140,7 @@ export default {
           description:"تب سنج دیجیتال رز دیتا",
           price:390000,
           percentage:45,
-          category: 'category5'
+          category: 'category2'
         },
         {
           img:img7,
@@ -153,7 +148,7 @@ export default {
           description:"تب سنج دیجیتال رز دیتا",
           price:1221120,
           percentage:23,
-          category: 'category5'
+          category: 'category1'
         },
         {
           img:img6,
@@ -161,7 +156,7 @@ export default {
           description:"تب سنج دیجیتال رز دیتا",
           price:504873,
           percentage:12,
-          category: 'category5'
+          category: 'category2'
         },
         {
           img:img5,
@@ -169,23 +164,7 @@ export default {
           description:"تب سنج دیجیتال رز دیتا",
           price:10002000,
           percentage:65,
-          category: 'category5'
-        },
-        {
-          img:img12,
-          title:"کد 12111",
-          description:"تخت بیمارستانی",
-          price:102000,
-          percentage:65,
-          category: 'category4'
-        },
-        {
-          img:img13,
-          title:"کد 1321",
-          description:"تخت بیمارستانی",
-          price:1020540,
-          percentage:65,
-          category: 'category4'
+          category: 'category2'
         },
         {
           img:img9,
@@ -195,41 +174,9 @@ export default {
           percentage:65,
           category: 'category3'
         },
-        {
-          img:img10,
-          title:"کد 1231",
-          description:"تیغ جراحی",
-          price:10002000,
-          percentage:65,
-          category: 'category2'
-        },
-        {
-          img:img1,
-          title:"کد 1231",
-          description:"تخت بیمارستانی",
-          price:10002000,
-          percentage:65,
-          category: 'category4'
-        },
-        {
-          img:img14,
-          title:"کد 1231",
-          description:"تخت بیمارستانی",
-          price:10002000,
-          percentage:65,
-          category: 'category4'
-        },
-        {
-          img:img15,
-          title:"کد 1231",
-          description:"مانیتورینگ",
-          price:1502000,
-          percentage:65,
-          category: 'category1'
-        },
 
       ],
-      currentCategory: 'category1'
+      currentCategory: 'all'
     }
   },
   components:{
@@ -237,10 +184,7 @@ export default {
     swiper
   },
   mounted() {
-    setInterval(()=>{
-      console.log(this.width_desc);
-      return this.width_desc = window.innerWidth > 1200
-    },[1000])
+    this.initSwiper()
   },
   computed: {
     filteredItems() {
@@ -249,7 +193,7 @@ export default {
         filteredItems = filteredItems.filter(item => item.category === this.currentCategory)
       }
       return filteredItems
-    },
+    }
   },
   methods: {
     filter(category) {
@@ -260,9 +204,7 @@ export default {
     },
     handleClickSwiper(data) {
       this.filter(`${data}`)
-
-      console.log(data)
     },
   }
 }
-</script>
+</script> -->

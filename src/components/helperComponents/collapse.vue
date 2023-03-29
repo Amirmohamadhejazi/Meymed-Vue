@@ -60,8 +60,8 @@ export default {
 .icon_clp {
   font-size: 30px;
   background: #DEEFF5;
-  width: 50px;
-  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -71,9 +71,7 @@ export default {
 
 
 .rotate {
-transform: rotate(0);
-
-
+  transform: rotate(0);
 }
 
 .clp_cmp{

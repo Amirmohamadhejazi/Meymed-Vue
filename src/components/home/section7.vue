@@ -60,6 +60,7 @@ export default {
     padding: 20px;
     background: #73B1F2;
     border-radius: 15px;
+    color: white;
 }
 .text_top_sec7{
     font-weight: 700;

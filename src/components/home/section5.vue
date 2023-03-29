@@ -32,7 +32,6 @@
     </div>
     <div class="col-12 col-lg-6 d-flex m-2 align-items-start justify-content-center justify-content-lg-between box_items2"  >
        <div class="w-100 d-flex flex-column-reverse flex-lg-row text-center justify-content-lg-between align-items-center align-items-lg-start">
-<!--       <div class="w-100 d-flex flex-column-reverse justify-content-between ">-->
         <div class="d-flex flex-column text-title-sec5 mt-3 mt-lg-0">
           <span>بیش از 30 درصد تخفیف</span>
           <span> برای محصولات برند رزمکس</span>

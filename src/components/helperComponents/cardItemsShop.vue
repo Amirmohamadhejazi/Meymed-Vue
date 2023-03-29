@@ -2,7 +2,7 @@
 <!--  <h1>{{// dataCard.id}}</h1>-->
      <div class="box_items">
       <div class="d-flex flex-center">
-        <img :src="dataCard.img" alt="">
+        <img :src="dataCard.img"  class="img-cover"   alt="">
       </div>
       <span class="title">{{dataCard.title}}</span>
       <span class="description">{{dataCard.description}}</span>
@@ -26,8 +26,6 @@
   margin-top: 20px;
   position: relative;
   padding: 30px;
-  width: 300px;
-  height: 309px;
   background: #FFFFFF;
   box-shadow: 5px 10px 30px -15px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
@@ -36,6 +34,7 @@
   justify-content: end;
   font-size: 14px;
   color: black;
+  margin: 10px; 
 }
 .box_items .title{
   color: #3C3C3C;
@@ -62,6 +61,13 @@
   color: white;
   background: #FF4A4A;
   border-radius: 7px;
+}
+.img-cover{
+  width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    height: 156px;
+    width: 208;
 }
 
 /************************************ search form ****************************************/

@@ -39,7 +39,8 @@ export default {
     Sec4_6,
     Sec8,
     Sec7,
-    Footer,
+    Footer, 
+    // isotop
   },
 }
 

@@ -8,6 +8,7 @@
         </div>
       </div>
       <div class="d-flex flex-column my-3" style="font-size: 10px">
+        {{items_options[number_option].text}}
         <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
         <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
         <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
@@ -32,8 +33,6 @@
             <button type="submit"  >ثبت درخواست</button>
           </div>
         </form>
-
-
     </div>
     <div class="item_box d-flex align-content-center justify-content-end text-center flex-column col-12 col-lg-4 gap10">
       <div class="img_detail_selected">
@@ -41,7 +40,7 @@
       </div>
       <span class="font_lg mt-5" >{{items_options[number_option].text}}</span>
       <div class="w-100 d-flex justify-content-center font_sm">
-        <span class="mt-3 w-75">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد</span>
+        <span class="mt-3 w-75">{{items_options[number_option].text}} متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد</span>
       </div>
     </div>
   </div>
@@ -134,23 +133,6 @@
   font-weight: 400
 }
 
-
-/************************************ search form ****************************************/
-
-
-/************************************ Box ****************************************/
-@media only screen and (max-width: 1199px) {
-
-}
-@media only screen and (max-width: 767px) {
-
-}
-@media only screen and (max-width: 500px) {
-
-}
-@media only screen and (max-width: 575px) {
-
-}
 </style>
 
 <script>
@@ -170,12 +152,12 @@ export default {
         {
           text:"سازمانی",
           img:"../src/assets/img/icon/sec1_icon5.svg",
-          id:4
+          id:0
         },
         {
           text:"استعلام قیمت",
           img:"../src/assets/img/icon/sec1_icon4.svg",
-          id:3
+          id:1
         },
         {
           text:"درخواست دمو",
@@ -185,12 +167,12 @@ export default {
         {
           text:"درخواست خدمات",
           img:"../src/assets/img/icon/sec1_icon2.svg",
-          id:1
+          id:3
         },
         {
           text:"درخواست تعمیرات",
           img:"../src/assets/img/icon/sec1_icon1.svg",
-          id:0
+          id:4
         }
       ]
     }
@@ -199,6 +181,7 @@ export default {
   },
   methods:{
     changeTab(data) {
+      console.log(data)
       this.number_option = data
     },
     handleSubmit() {

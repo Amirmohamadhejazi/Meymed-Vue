@@ -237,4 +237,14 @@ color: #FFFFFF;
   font-size: 11px;
   color: #FFFFFF;
 }
+
+
+@media only screen and (max-width: 992px) {
+  .box_footer{
+  border-radius: 30px;
+  margin-top: 300px;
+  padding: 300px 30px 90px 30px;
+}
+
+}
 </style>

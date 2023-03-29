@@ -12,14 +12,14 @@
         <div class="icon_R_L" @click="next"><img src="../../assets/img/icon/left.svg" alt=""></div>
       </div>
     </div>
-    <div class="swiper-container1"  v-if="typeCmp === 'sec4'">
+    <div class="swiper-container-card-sec4"  v-if="typeCmp === 'sec4'">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(items , index) in itemsSwipe1"  >
           <cardItemsShop :dataCard="items"/>
         </div>
       </div>
     </div>
-    <div class="swiper-container2"  v-if="typeCmp === 'sec6'">
+    <div class="swiper-container-card-sec6"  v-if="typeCmp === 'sec6'">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(items , index) in itemsSwipe2"  >
           <div class="box_items_s2"><img :src="items.img" alt=""></div>
@@ -30,7 +30,7 @@
 </template>
 <style>
 /************************************ Box ****************************************/
-.swiper-container1 , .swiper-container2{
+.swiper-container-card-sec4 , .swiper-container-card-sec6{
   overflow: hidden;
   position: relative;
 }
@@ -122,8 +122,6 @@ export default {
     options1:{
       type: Object,
       default: () => ({
-        slidesPerView: 1,
-        spaceBetween: 0,
         breakpoints: {
           360: {
             slidesPerView: 1.05,
@@ -154,7 +152,7 @@ export default {
             spaceBetween: 0,
           },
           1400: {
-            slidesPerView: 4,
+            slidesPerView: 4.15,
             spaceBetween: 0,
           },
         },
@@ -188,10 +186,16 @@ export default {
             slidesPerView: 4.7,
             spaceBetween: 0,
           },
+          1200: {
+            slidesPerView: 5.6,
+            spaceBetween: 0,
+          },
+          1400: {
+            slidesPerView: 6.6,
+            spaceBetween: 0,
+          },
         },
-
-        slidesPerView: 6,
-        spaceBetween: 0,
+      
       })
     }
   },
@@ -337,8 +341,8 @@ export default {
   },
   methods: {
     initSwiper() {
-      this.swiper1 = new Swiper('.swiper-container1', this.options1)
-      this.swiper2 = new Swiper('.swiper-container2', this.options2)
+      this.swiper1 = new Swiper('.swiper-container-card-sec4', this.options1)
+      this.swiper2 = new Swiper('.swiper-container-card-sec6', this.options2)
     },
     next(){
       console.log(this.typeCmp)

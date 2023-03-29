@@ -29,6 +29,7 @@ html, body{
 body{
   padding-top: 30px;
    background-color: #F4FAFF;
+   /* background-color: blue; */
   font-family: iranyekanwebblack;
   background-image: url("/src/assets/img/body img/1.svg") ,url("/src/assets/img/body img/2.svg") ,url("/src/assets/img/body img/3.svg") ,url("/src/assets/img/body img/4.svg") ,url("/src/assets/img/body img/5.svg")  ;
   background-repeat: no-repeat;

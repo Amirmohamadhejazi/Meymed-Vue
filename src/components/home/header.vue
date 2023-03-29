@@ -1,6 +1,5 @@
 
 <template>
-<!--  <div class="d-flex justify-content-center flex-column bg_White trn3 container  ">-->
     <div class="navbar">
       <div class=" iconLogo" style="z-index: 4"><img src="src/assets/logo.svg"  width="100%" height="100%"  alt="icon"></div>
       <div class="input-group flex-nowrap position-relative input_search input_desktop">
@@ -65,22 +64,7 @@
         </div>
       </div>
     </nav>
-
-  <div class="w-100 flex-center" >
-    <div class="box_category flex-wrap">
-      <div class="items_category mt-2" v-for="items in dataCategory" :key="items.key">
-          <div class="img_category">
-            <img :src="items.img" style="width: 100% ; height: 100% ; object-fit: cover" alt="">
-          </div>
-          <span>{{items.text}}</span>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
+  <swiper typeCmp="sec_header" :data_swipe1="dataCategory"/>
 </template>
 
 <style>
@@ -151,14 +135,14 @@
 }
 
 .box_category{
-  width: 80%;
+  width: 82% !important;
   /*height: 10rem;*/
-  display: flex;
+  display: flex !important;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between !important;
   font-size: 12px;
   color: #454545;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .items_category{
   position: relative;
@@ -283,11 +267,8 @@
 </style>
 
 <script>
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue';
-
-// Import Swiper styles
-import 'swiper/css';
+ 
+import swiper from "@/components/helperComponents/swiper.vue";
 
 export default {
   data() {
@@ -380,20 +361,8 @@ export default {
     }
   },
   components:{
-    Swiper,
-    SwiperSlide,
+    swiper
   },
-  setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log('slide change');
-    };
-    return {
-      onSwiper,
-      onSlideChange,
-    };
-  },
+
 }
 </script>
