@@ -89,6 +89,8 @@
   padding: 20px;
   display: flex;
   height: 100%;
+
+  filter: grayscale(1);
 }
 /************************************ Box ****************************************/
 @media only screen and (max-width: 1199px) {

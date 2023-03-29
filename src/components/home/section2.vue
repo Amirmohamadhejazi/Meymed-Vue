@@ -24,7 +24,7 @@
   justify-content: center;
   align-items: start;
   font-size: 12px;
-  margin-bottom: 120px;
+  margin-bottom: 120px; 
 }
 .menu_inner_t ,.menu_inner_b{
   position: absolute;

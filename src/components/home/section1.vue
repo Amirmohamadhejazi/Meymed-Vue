@@ -2,10 +2,12 @@
   <div class="content_box_sec1 flex-column flex-lg-row">
     <div class="item_box col-12 col-lg-7 ">
       <div class="d-flex flex-row justify-content-between flex-wrap">
-        <div :class="[items.id  === number_option ? 'options_box_select options_box_selected' : 'options_box_select' ]" v-for="items in items_options" :key="items.id" @click="changeTab(items.id)">
+        <!-- <div :class="[items.id  === number_option ? 'options_box_select options_box_selected' : 'options_box_select' ]" v-for="items in items_options" :key="items.id" @click="changeTab(items.id)">
           <img :src="items.id  === number_option ? items.imgAcive :items.img" alt="">
           <span class="mt-3">{{items.text}}</span>
-        </div>
+        </div> -->
+        <swiper typeCmp="sec_1" :data_swipe_sec1="items_options" :changeTabSec1="changeTab" :number_option_sec1="number_option"/>
+
       </div>
       <div class="d-flex flex-column my-3" style="font-size: 10px">
         {{items_options[number_option].text}}
@@ -91,6 +93,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+  min-width: 100px;
 }
 .options_box_selected{
   background: #ebebeb;
@@ -137,6 +141,7 @@
 </style>
 
 <script>
+import swiper from "@/components/helperComponents/swiper.vue";
 
 export default {
   data() {
@@ -184,6 +189,7 @@ export default {
     }
   },
   components:{
+    swiper
   },
   methods:{
     changeTab(data) {

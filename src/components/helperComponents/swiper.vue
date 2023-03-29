@@ -16,7 +16,21 @@
         </div>
       </div>
     </div>
-    <div class="w-100 overflow-hidden" v-if="typeCmp==='sec_2_nav'">  
+    <div class="w-100 overflow-hidden" v-if="typeCmp==='sec_1'">  
+          <div class="swiper-container-sec1">
+              <div class="swiper-wrapper d-flex flex-row justify-content-between ">
+                <div :class="`options_box_select swiper-slide  d-flex flex-column ${items.id  === number_option_sec1 && 'options_box_selected'}`" 
+                v-for="items in data_swipe_sec1" :key="items.id" @click="changeTabSec1(items.id)">
+                  <img :src="items.id  === number_option_sec1 ? items.imgAcive :items.img" alt="">
+                  <span class="mt-3">{{items.text}}</span>
+                </div>
+              </div>
+          </div>
+    </div>    
+    
+    
+    
+    <div class="w-100  overflow-hidden" v-if="typeCmp==='sec_2_nav'">  
           <div class="swiper-container-sec2-nav">
               <div class="swiper-wrapper d-flex justify-content-between">
                  <div :class="`swiper-slide cursor_pointer items_sec_2_nav ${items.category == currentCategory && 'items_sec_2_nav_Active'}`"
@@ -110,9 +124,13 @@
     props: {
       typeCmp:String,
       SwiperhandleClick: Function,
+      changeTabSec1: Function,
       data_swipe1:[],
       data_swipe2:[],
       data_swipe3:[],
+      data_swipe_sec1:[],
+
+      number_option_sec1:"",
       currentCategory:"",
       options1: {
         type: Object,
@@ -159,19 +177,19 @@
               spaceBetween: 0,
             },
             400: {
-              slidesPerView: 2.7,
+              slidesPerView: 2.4,
               spaceBetween: 0,
             },
             450: {
-              slidesPerView: 3.1,
+              slidesPerView: 2.7,
               spaceBetween: 0,
             },
             576: {
-              slidesPerView: 4.1,
+              slidesPerView: 3.2,
               spaceBetween: 0,
             },
             768: {
-              slidesPerView: 5,
+              slidesPerView: 4.35,
               spaceBetween: 0,
             },
             992: {
@@ -219,6 +237,46 @@
           },
           1400: {
             slidesPerView: 3.8,
+            spaceBetween: 0,
+          },
+        },
+      
+      })
+    },
+    options4: {
+      type: Object,
+      default: () => ({
+        breakpoints: {
+          360: {
+            slidesPerView: 2.2,
+            spaceBetween: 0,
+          },
+          400: {
+            slidesPerView: 2.5,
+            spaceBetween: 0,
+          },
+          450: {
+            slidesPerView: 2.9,
+            spaceBetween: 0,
+          },
+          576: {
+            slidesPerView: 3.6,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 5,
+            spaceBetween: 0,
+          },
+          992: {
+            slidesPerView: 3.9,
+            spaceBetween: 0,
+          },
+          1200: {
+            slidesPerView: 4.7,
+            spaceBetween: 0,
+          },
+          1400: {
+            slidesPerView: 5,
             spaceBetween: 0,
           },
         },
@@ -274,6 +332,7 @@
         this.swiper1 = new Swiper('.swiper-container-header', this.options1)
         this.swiper2 = new Swiper('.swiper-container-sec2-nav', this.options2)
         this.swiper3 = new Swiper('.swiper-container-sec2-content', this.options3)
+        this.swiper4 = new Swiper('.swiper-container-sec1', this.options4)
       },
       handleClick(data) {
       this.SwiperhandleClick(data);
