@@ -3,7 +3,7 @@
     <div class="box_category flex-wrap" v-if="typeCmp==='sec_header'">
       <div class="w-100 overflow-hidden">
         <div class="swiper-container-header">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper swiper-wrapper_header">
               <div class="swiper-slide" v-for="items in data_swipe1" :key="items.key">
                 <div class="items_category mt-2">
                   <div class="img_category">
@@ -18,7 +18,7 @@
     </div>
     <div class="w-100 overflow-hidden" v-if="typeCmp==='sec_1'">  
           <div class="swiper-container-sec1">
-              <div class="swiper-wrapper d-flex flex-row justify-content-between ">
+              <div class="swiper-wrapper  d-flex flex-row justify-content-between ">
                 <div :class="`options_box_select swiper-slide  d-flex flex-column ${items.id  === number_option_sec1 && 'options_box_selected'}`" 
                 v-for="items in data_swipe_sec1" :key="items.id" @click="changeTabSec1(items.id)">
                   <img :src="items.id  === number_option_sec1 ? items.imgAcive :items.img" alt="">
@@ -93,9 +93,14 @@
     justify-content: center;
     align-items: center;
   }
-
+.swiper-wrapper_header{ 
+    }
   /************************************ Box ****************************************/
-  @media only screen and (max-width: 1199px) {
+  @media only screen and (min-width: 1400px) {
+    .swiper-wrapper_header{
+      display: flex;
+      justify-content: center !important;;
+    }
   }
   @media only screen and (max-width: 767px) {
   }

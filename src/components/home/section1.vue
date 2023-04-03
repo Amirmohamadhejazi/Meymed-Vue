@@ -11,10 +11,11 @@
       </div>
       <div class="d-flex flex-column my-3" style="font-size: 10px">
         {{items_options[number_option].text}}
-        <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
-        <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
-        <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
-      </div>
+        <div class="d-flex flex-row mt-2" v-for="items in [0 , 1, 2]">
+          <input class="form-check-input cursor_pointer" type="checkbox" value="" id="flexCheckDefault">
+          <span class="me-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
+        </div>
+        </div>
         <form class="d-flex flex-row justify-content-between flex-wrap" @submit.prevent="handleSubmit">
           <div class="input-group flex-nowrap boxes_under_options">
             <input type="text" class="form-control inputCustom" placeholder="نام و نام خانوادگی" aria-label="name" aria-describedby="addon-wrapping" name="name" v-model="form.name">

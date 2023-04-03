@@ -5,13 +5,10 @@
           <div class="w-100 d-flex justify-content-between align-items-center">
             <div class="d-flex flex-row align-items-center" >
               <span class="text_index">{{index+1}}</span>
-              <span class="me-4 text-title">{{items.title}}</span>
+              <span class="mx-1 text-title">{{items.title}}</span>
             </div>
-            <div class="icon_clp" @click="toggle(index)">
-              <div :class="{ 'rotate': show }">
-                <span v-if="show === index ">+</span>
-                <span v-else>&times;</span>
-              </div>
+            <div class=" icon_clp_box" @click="toggle(index)">
+                <span :class=" show === index ? 'flex-center rotate icon_clp' :'flex-center icon_clp'">+</span>
             </div>
           </div>
           <div ref="content" v-show="show === index">
@@ -20,8 +17,8 @@
             </div>
           </div>
       </div>
-
     </div>
+
   </div>
 
 </template>
@@ -57,24 +54,33 @@ export default {
   /*background:red;*/
 }
 
-.icon_clp {
+.icon_clp_box {
+  position: absolute;
+  left: 0;
   font-size: 30px;
   background: #DEEFF5;
-  min-width: 50px;
-  min-height: 50px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: 0.3s;
 }
-
+.icon_clp  {
+  transition: 0.3s;
+}
+ 
 
 .rotate {
-  transform: rotate(0);
+  transform-origin: center;
+  transform: rotate(45deg);
+
 }
 
 .clp_cmp{
+  position: relative;
 padding: 30px;
 width: 100%;
 display: flex;
@@ -84,7 +90,7 @@ background: #FFFFFF;
 box-shadow: 5px 10px 30px -15px rgba(0, 0, 0, 0.1);
 border-radius: 15px;
   color: #374957;
-}
+ }
 
 .text_index{
 font-size: 36px;
@@ -93,7 +99,7 @@ color: #ECECEC;
 }
 .text-title{
   font-weight: 400;
-  font-size: 18px;
+  font-size: clamp(13px , 1rem , 1vw);
   color: #000000;
 
 }

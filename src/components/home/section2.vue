@@ -247,7 +247,7 @@ export default {
   },
   mounted() {
     setInterval(()=>{
-      console.log(this.width_desc);
+      // console.log(this.width_desc);
       return this.width_desc = window.innerWidth > 1200
     },[1000])
   },
@@ -270,7 +270,7 @@ export default {
     handleClickSwiper(data) {
       this.filter(`${data}`)
 
-      console.log(data)
+      // console.log(data)
     },
   }
 }

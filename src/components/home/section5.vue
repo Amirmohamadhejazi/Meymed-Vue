@@ -62,7 +62,7 @@ export default {
   },
   methods: {
     getTime(){
-      let countDownDate = new Date("April 1, 2023 15:37:25").getTime();
+      let countDownDate = new Date("April 20, 2023 15:37:25").getTime();
       setInterval(()=> {
         let now = new Date().getTime();
         let distance = countDownDate - now;
