@@ -6,23 +6,26 @@
         <div class="position-absolute iconInput" style="z-index: 6"><img src="src/assets/searchIcon.svg"  width="100%" height="100%"  alt="icon"></div>
         <input type="text" class="form-control inputCustom" placeholder="نام محصول یا برند مورد نظرتان را وارد نمایید!" aria-label="numberpeopel" aria-describedby="addon-wrapping" name="numberpeopel" >
       </div>
-      <div class="inputNav flex-center bg-white" >
+      <!-- <div class="inputNav flex-center bg-white" >
         <span class="familly_iranyekan_bold display_span_sell">سبد درخواست</span>
         <div class=" iconbtn" style="z-index: 4"><img src="src/assets/shopIcon.svg"  width="100%" height="100%"  alt="icon"></div>
-      </div>
-
-
-      <div class="btn_menu_mob bg-white">
-        <div class="w-100 h-100 flex-center">
-
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"  aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-
-          </button>
+      </div> -->
+      <div class="d-flex flex-row flex-wrap">
+        <div class="inputNav flex-center bg-white " >
+          <span class="familly_iranyekan_bold display_span_sell">سبد درخواست</span>
+          <div class=" iconbtn" style="z-index: 4"><img src="src/assets/shopIcon.svg"  width="100%" height="100%"  alt="icon"></div>
+        </div>
+        <div class="btn_menu_mob bg-white me-3"> 
+          <div class="w-100 h-100 flex-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"  aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
         </div>
       </div>
+      
 
-      <div class="inputNav flex-center bg_Saffron display_btn_nav_desc">
+      <div class="inputNav flex-center bg_Saffron display_btn_nav_desc cursor_pointer">
         <div class="w-100 d-flex justify-content-around align-items-center">
           <div class="d-flex flex-column text-left">
             <span>۰۲۱</span>
@@ -31,21 +34,21 @@
           <div class=" iconbtn" style="z-index: 4"><img src="src/assets/callIcon.svg"  width="100%" height="100%"  alt="icon"></div>
         </div>
       </div>
-      <div class="inputNav flex-center bg_TuftsBlue display_btn_nav_desc">
+      <div class="inputNav flex-center bg_TuftsBlue display_btn_nav_desc cursor_pointer">
         <div class="w-100 d-flex justify-content-around align-items-center text-center text-white">
           ورود | ثبت نام
         </div>
       </div>
-
-
+ 
     </div>
-    <div class="input-group flex-nowrap position-relative input_search input_mob mb-5">
+    <div class="input-group flex-nowrap position-relative input_search input_mob mb-lg-5">
       <div class="position-absolute iconInput" style="z-index: 4"><img src="src/assets/searchIcon.svg"  width="100%" height="100%"  alt="icon"></div>
       <input type="text" class="form-control inputCustom" placeholder="نام محصول یا برند مورد نظرتان را وارد نمایید!" aria-label="numberpeopel" aria-describedby="addon-wrapping" name="numberpeopel" >
-    </div>
-
-    <nav class="navbar navbar-expand-xl bg-white rounded nav-canvas   nav_mobile_items ">
-      <div class="w-100 p-0 ">
+    </div> 
+    <nav class="navbar navbar-expand-xl bg-white rounded nav-canvas   nav_mobile_items "> 
+      
+      
+        <div class="w-100 p-0 ">
         <button class="navbar-toggler menu_btn_mob" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"  aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,14 +58,13 @@
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-
             <div class="d-flex  align-items-center justify-content-around">
-              <div class="inputNav flex-center bg_TuftsBlue display_btn_nav_mobile">
+              <div class="inputNav flex-center bg_TuftsBlue display_btn_nav_mobile cursor_pointer">
                 <div class="w-100 d-flex justify-content-around align-items-center text-center text-white">
                   ورود | ثبت نام
                 </div>
               </div> 
-              <div class="inputNav flex-center bg_Saffron display_btn_nav_mobile mt-2">
+              <div class="inputNav flex-center bg_Saffron display_btn_nav_mobile mt-2 cursor_pointer">
                 <div class="w-100 d-flex justify-content-around align-items-center">
                   <div class="d-flex flex-column text-left">
                     <span>۰۲۱</span>
@@ -162,7 +164,7 @@
   justify-content: space-between !important;
   font-size: 12px;
   color: #454545;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 .items_category{
   position: relative;
@@ -170,8 +172,6 @@
   padding: 20px;
   gap: 10px;
   height: 160px;
-  /*width: 15%;*/
-  /*!*height: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,6 +191,14 @@
   justify-content: center;
   align-items: center;
 }
+
+.display_desc_sell{
+  display: flex;
+}
+.display_mob_sell{
+  display: none;
+}
+
 /************************************ search form ****************************************/
 
 .form-control::placeholder {
@@ -207,6 +215,7 @@
   height: 45px
 
 }
+
 .form-control:focus{
   color:black;
   box-shadow:unset;
@@ -214,8 +223,8 @@
 }
 
 /************************************ Box ****************************************/
-@media only screen and (max-width: 1199px) {
 
+@media only screen and (max-width: 1199px) {
   .input_search {
     max-width: 35%;
   }
@@ -232,6 +241,7 @@
   .nav_desktop{
     display: none;
   }
+  
   .btn_menu_mob{
     display: block;
     height: 55px;
@@ -248,9 +258,21 @@
     height: 75%!important;
   }
 }
+@media only screen and (max-width: 992px) {
+  .content_box_sec1{
+    margin-top: 0 !important;
+  }
+}
 @media only screen and (max-width: 767px) {
   .display_span_sell{
     display: none!important;
+  }
+
+  .display_desc_sell{
+  display: none !important;
+  }
+  .display_mob_sell{
+    display: flex !important;
   }
   .navbar {
     width: 100%;

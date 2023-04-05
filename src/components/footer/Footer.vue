@@ -196,7 +196,7 @@ color: #FFFFFF;
   text-align: center;
   color: #676767;
   width: 90%;
-  overflow: hidden;
+  overflow-y: auto;
   text-overflow: ellipsis;  
   margin-top: 10px;
 }
@@ -226,7 +226,7 @@ width: 70%;
 font-weight: 700;
 font-size: 11px;
 text-align: center;
-color: #FFFFFF;
+color: hsl(0, 0%, 100%);
 }
 
 .box_end_footer_blue{

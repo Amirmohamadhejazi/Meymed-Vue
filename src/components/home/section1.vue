@@ -1,49 +1,52 @@
 <template>
-  <div class="content_box_sec1 flex-column flex-lg-row">
-    <div class="item_box col-12 col-lg-7 ">
-      <div class="d-flex flex-row justify-content-between flex-wrap">
-        <!-- <div :class="[items.id  === number_option ? 'options_box_select options_box_selected' : 'options_box_select' ]" v-for="items in items_options" :key="items.id" @click="changeTab(items.id)">
-          <img :src="items.id  === number_option ? items.imgAcive :items.img" alt="">
-          <span class="mt-3">{{items.text}}</span>
-        </div> -->
-        <swiper typeCmp="sec_1" :data_swipe_sec1="items_options" :changeTabSec1="changeTab" :number_option_sec1="number_option"/>
+  <div class="content_box_sec1 d-flex row gx-3 flex-wrap">
+    <div class=" col-12 col-lg-7 ">
+      <div class="item_box">
+        <div class="d-flex flex-row justify-content-between flex-wrap">
+          <swiper typeCmp="sec_1" :data_swipe_sec1="items_options" :changeTabSec1="changeTab" :number_option_sec1="number_option"/>
 
+        </div>
+        <div class="d-flex flex-column my-3" style="font-size: 10px">
+          {{items_options[number_option].text}}
+          <div class="d-flex flex-row mt-2" v-for="items in [0 , 1, 2]">
+            <input class="form-check-input cursor_pointer" type="checkbox" value="" id="flexCheckDefault">
+            <span class="me-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
+          </div>
+          </div>
+          <form class="d-flex flex-row justify-content-between flex-wrap" @submit.prevent="handleSubmit">
+            <div class="input-group flex-nowrap boxes_under_options">
+              <input type="text" class="form-control inputCustom" placeholder="نام و نام خانوادگی" aria-label="name" aria-describedby="addon-wrapping" name="name" v-model="form.name">
+            </div>
+            <div class="input-group flex-nowrap boxes_under_options">
+              <input type="text" class="form-control inputCustom" placeholder="شماره تماس" aria-label="phone" aria-describedby="addon-wrapping" name="phone"  v-model="form.phone">
+            </div>
+            <div class="input-group flex-nowrap boxes_under_options">
+              <input type="text" class="form-control inputCustom" placeholder="استان" aria-label="ost" aria-describedby="addon-wrapping" name="ost"  v-model="form.ost">
+            </div>
+            <div class="input-group flex-nowrap boxes_under_options">
+              <input type="text" class="form-control inputCustom" placeholder="شهر" aria-label="city" aria-describedby="addon-wrapping" name="city" v-model="form.city" >
+            </div>
+            <div class="input-group flex-nowrap boxes_under_options">
+              <input type="text" class="form-control inputCustom" placeholder="توضیحات محصول" aria-label="detail" aria-describedby="addon-wrapping" name="detail" v-model="form.detail" >
+            </div>
+            <div class="boxes_under_options bg_yellow">
+              <button type="submit"  >ثبت درخواست</button>
+            </div>
+          </form>
       </div>
-      <div class="d-flex flex-column my-3" style="font-size: 10px">
-        {{items_options[number_option].text}}
-        <div class="d-flex flex-row mt-2" v-for="items in [0 , 1, 2]">
-          <input class="form-check-input cursor_pointer" type="checkbox" value="" id="flexCheckDefault">
-          <span class="me-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</span>
-        </div>
-        </div>
-        <form class="d-flex flex-row justify-content-between flex-wrap" @submit.prevent="handleSubmit">
-          <div class="input-group flex-nowrap boxes_under_options">
-            <input type="text" class="form-control inputCustom" placeholder="نام و نام خانوادگی" aria-label="name" aria-describedby="addon-wrapping" name="name" v-model="form.name">
-          </div>
-          <div class="input-group flex-nowrap boxes_under_options">
-            <input type="text" class="form-control inputCustom" placeholder="شماره تماس" aria-label="phone" aria-describedby="addon-wrapping" name="phone"  v-model="form.phone">
-          </div>
-          <div class="input-group flex-nowrap boxes_under_options">
-            <input type="text" class="form-control inputCustom" placeholder="استان" aria-label="ost" aria-describedby="addon-wrapping" name="ost"  v-model="form.ost">
-          </div>
-          <div class="input-group flex-nowrap boxes_under_options">
-            <input type="text" class="form-control inputCustom" placeholder="شهر" aria-label="city" aria-describedby="addon-wrapping" name="city" v-model="form.city" >
-          </div>
-          <div class="input-group flex-nowrap boxes_under_options">
-            <input type="text" class="form-control inputCustom" placeholder="توضیحات محصول" aria-label="detail" aria-describedby="addon-wrapping" name="detail" v-model="form.detail" >
-          </div>
-          <div class="boxes_under_options bg_yellow">
-            <button type="submit"  >ثبت درخواست</button>
-          </div>
-        </form>
+      
     </div>
-    <div class="item_box d-flex align-content-center justify-content-end text-center flex-column col-12 col-lg-4 gap10">
-      <div class="img_detail_selected">
-        <img src="../../assets/img/icon/emojione_hospital.svg" alt="">
-      </div>
-      <span class="font_lg mt-5" >{{items_options[number_option].text}}</span>
-      <div class="w-100 d-flex justify-content-center font_sm">
-        <span class="mt-3 w-75">{{items_options[number_option].text}} متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد</span>
+    <div class=" d-flex  text-center col-12 col-lg-5">
+      <div class="item_box d-flex  align-items-end">
+        <div class="img_detail_selected">
+          <img src="../../assets/img/icon/emojione_hospital.svg" alt="">
+        </div>
+        <div class="d-flex flex-column   py-5" style="">
+          <span class="font_lg mt-5" >{{items_options[number_option].text}}</span>
+          <div class="w-100 d-flex justify-content-center font_sm">
+            <span class="mt-3 w-75">{{items_options[number_option].text}} متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>

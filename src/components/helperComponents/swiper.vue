@@ -1,6 +1,6 @@
 <template>
     <div class="w-100 flex-center" >
-    <div class="box_category flex-wrap" v-if="typeCmp==='sec_header'">
+    <div class="box_category flex-wrap mt-lg-5" v-if="typeCmp==='sec_header'">
       <div class="w-100 overflow-hidden">
         <div class="swiper-container-header">
             <div class="swiper-wrapper swiper-wrapper_header">

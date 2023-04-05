@@ -1,7 +1,7 @@
 <template>
   <div class="content_box_sec3 d-flex flex-lg-row justify-content-lg-between align-items-center  flex-column ">
     <div class="box1 d-flex flex-lg-row align-items-center flex-column-reverse ">
-      <div class="col-lg-6 col-12 d-flex align-items-lg-start align-items-center flex-column pe-3  ">
+      <div class="col-lg-6 col-12 d-flealign-items-centerx align-items-lg-start align-items-center flex-column pe-3  ">
         <span>انواع محصولات ضدعفونی کننده</span>
         <div class="box_btn  mt-3 mb-3 mb-lg-0">مشاهده بیشتر</div>
       </div>
